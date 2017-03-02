@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580345ED841DE9ADD89BFEFF /* Pods_MixpanelDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C4278C1720429ED0BD3134 /* Pods_MixpanelDemo.framework */; };
 		F40BDD591E67DAB0005DD81F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40BDD581E67DAB0005DD81F /* AppDelegate.swift */; };
 		F40BDD5B1E67DAB0005DD81F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40BDD5A1E67DAB0005DD81F /* ViewController.swift */; };
 		F40BDD5E1E67DAB0005DD81F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40BDD5C1E67DAB0005DD81F /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A382387A3269F732C010E76C /* Pods-MixpanelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixpanelDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MixpanelDemo/Pods-MixpanelDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C8C4278C1720429ED0BD3134 /* Pods_MixpanelDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MixpanelDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E890AA8C8892A680AD0106BE /* Pods-MixpanelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixpanelDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MixpanelDemo/Pods-MixpanelDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F40BDD551E67DAB0005DD81F /* MixpanelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixpanelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40BDD581E67DAB0005DD81F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40BDD5A1E67DAB0005DD81F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580345ED841DE9ADD89BFEFF /* Pods_MixpanelDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AF15A2E5716E28858C05C18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A382387A3269F732C010E76C /* Pods-MixpanelDemo.debug.xcconfig */,
+				E890AA8C8892A680AD0106BE /* Pods-MixpanelDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A2DCB52AAE244754A5C267F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8C4278C1720429ED0BD3134 /* Pods_MixpanelDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F40BDD4C1E67DAAF005DD81F = {
 			isa = PBXGroup;
 			children = (
 				F40BDD571E67DAB0005DD81F /* MixpanelDemo */,
 				F40BDD561E67DAB0005DD81F /* Products */,
+				8AF15A2E5716E28858C05C18 /* Pods */,
+				A2DCB52AAE244754A5C267F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F40BDD671E67DAB0005DD81F /* Build configuration list for PBXNativeTarget "MixpanelDemo" */;
 			buildPhases = (
+				DE8D8F2B1933C809576A9B34 /* [CP] Check Pods Manifest.lock */,
 				F40BDD511E67DAB0005DD81F /* Sources */,
 				F40BDD521E67DAB0005DD81F /* Frameworks */,
 				F40BDD531E67DAB0005DD81F /* Resources */,
+				78239C9B0EC5D29492168CA8 /* [CP] Embed Pods Frameworks */,
+				65B23F6C77F87B54346CBA1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65B23F6C77F87B54346CBA1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MixpanelDemo/Pods-MixpanelDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78239C9B0EC5D29492168CA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MixpanelDemo/Pods-MixpanelDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE8D8F2B1933C809576A9B34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F40BDD511E67DAB0005DD81F /* Sources */ = {
@@ -256,6 +331,7 @@
 		};
 		F40BDD681E67DAB0005DD81F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A382387A3269F732C010E76C /* Pods-MixpanelDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MixpanelDemo/Info.plist;
@@ -268,6 +344,7 @@
 		};
 		F40BDD691E67DAB0005DD81F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E890AA8C8892A680AD0106BE /* Pods-MixpanelDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MixpanelDemo/Info.plist;

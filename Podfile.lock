@@ -1,0 +1,12 @@
+PODS:
+  - Mixpanel-swift (2.1.2)
+
+DEPENDENCIES:
+  - Mixpanel-swift
+
+SPEC CHECKSUMS:
+  Mixpanel-swift: e6234affa94d14f76c856f301693dc43cae5dcb0
+
+PODFILE CHECKSUM: 22daa959c2091f5e4318bac572f1b71d9ed74075
+
+COCOAPODS: 1.1.1

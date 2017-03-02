@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Mixpanel
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        initializeMixpanel()
+        
         return true
     }
 
@@ -41,6 +44,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func initializeMixpanel() {
+        Mixpanel.initialize(token: "d42dc54689a352c7aa506358f8da209a")
+        Mixpanel.mainInstance().flushInterval = 10
+        var mixpanelID = UserDefaults.standard.object(forKey: "MixpanelID")
+        if (mixpanelID == nil) {
+            mixpanelID = "hello@appcoda.com"
+            UserDefaults.standard.set(mixpanelID, forKey: "MixpanelID")
+        }
+        Mixpanel.mainInstance().identify(distinctId: mixpanelID as! String)
+        Mixpanel.mainInstance().registerSuperProperties(["App Language" : "English"])
+        Mixpanel.mainInstance().track(event: "App Launched")
+    }
 
 }
 
